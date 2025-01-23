@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2b2b2b;
+    color: #f1f1f1;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px #000;
+}
+#gridContainer {
+    display: inline-block;
+    margin: 20px auto;
+    border: 2px solid #f1f1f1;
+}
+table {
+    border-spacing: 1px;
+}
+td {
+    width: 20px;
+    height: 20px;
+    transition: background-color 0.3s ease;
+}
+td.dead {
+    background-color: #444;
+}
+td.live {
+    background-color: #ffcc00;
+}
+.controls {
+    margin-top: 20px;
+}
+button, input {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover, input:hover {
+    background-color: #ffcc00;
+    color: #2b2b2b;
+}
+
+/* Skin 1: Světlý skin (pro malé obrazovky) */
+@media (max-width: 600px) {
+    body {
+        background-color: white;
+        color: black;
+    }
+    td.live {
+        background-color: #4caf50;
+    }
+    td.dead {
+        background-color: #d3d3d3;
+    }
+}
+
+/* Skin 2: Tmavý skin (pro větší obrazovky) */
+@media (min-width: 601px) {
+    body {
+        background-color: black;
+        color: white;
+    }
+    td.live {
+        background-color: #ffcc00;
+    }
+    td.dead {
+        background-color: #444;
+    }
+}
